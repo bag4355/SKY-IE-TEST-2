@@ -80,6 +80,13 @@ def build_model(*, daily: bool = True, threads: int = 32):
     m.addConstr(openF.sum() <= 5, "MaxFactory")
     m.addConstr(openW.sum() <= 20, "MaxWarehouse")
 
+    # link facility activation to opening decision
+    for w in WEEKS:
+        for f in dp.FACTORIES:
+            m.addConstr(actF[w, f] <= openF[f], name=f"OpenLinkF_{w}_{f}")
+        for h in dp.WAREHOUSES:
+            m.addConstr(actW[w, h] <= openW[h], name=f"OpenLinkW_{w}_{h}")
+
     # ═══════════════ 1. PRODUCTION VARIABLES ═══════════════════════════════
     TSET = DAYS if daily else WEEKS
     ProdR = m.addVars(TSET, dp.FACTORIES, dp.SKUS,
@@ -239,10 +246,12 @@ def build_model(*, daily: bool = True, threads: int = 32):
 
                 # Demand of the week
                 dem = 0
-                for d in (daterange(w.start_time.date(),
-                                    w.start_time.date()+dt.timedelta(6))):
-                    dem += dp.DEMAND_DICT.get((d, s, c), 0)  \
-                           if (h, (c := dp.iso_city.get(c))) in dp.edges_WH_CT else 0
+                week_days = daterange(w.start_time.date(),
+                                      w.start_time.date()+dt.timedelta(6))
+                for d in week_days:
+                    for city in dp.CITIES:
+                        if (h, city) in dp.edges_WH_CT:
+                            dem += dp.DEMAND_DICT.get((d, s, city), 0)
                 m.addConstr(dem - Short[w, h, s] <=
                             Inv[w, h, s, 0] + arrivals,
                             name=f"DemandSat_{w}_{h}_{s}")
@@ -266,13 +275,15 @@ def build_model(*, daily: bool = True, threads: int = 32):
     # CAPEX, Production cost, Transport cost, Inventory cost, Short/Env fees
     capex = gp.LinExpr()
     for f in dp.FACTORIES:
-        fx = dp.FX_RATE[(WEEKS[tipF[f].LB].start_time.date(), dp.iso_site[f])]
-        capex += openF[f] * dp.site_cost.loc[dp.site_cost.site_id == f,
-                                             "init_cost_local"].iloc[0] / fx
+        capex += openF[f] * dp.site_cost.loc[
+            dp.site_cost.site_id == f,
+            "init_cost_usd"
+        ].iloc[0]
     for h in dp.WAREHOUSES:
-        fx = dp.FX_RATE[(WEEKS[tipW[h].LB].start_time.date(), dp.iso_site[h])]
-        capex += openW[h] * dp.site_cost.loc[dp.site_cost.site_id == h,
-                                             "init_cost_local"].iloc[0] / fx
+        capex += openW[h] * dp.site_cost.loc[
+            dp.site_cost.site_id == h,
+            "init_cost_usd"
+        ].iloc[0]
 
     # Production & wage cost (OT / holiday premium handled in run‑module)
     prod_cost = gp.LinExpr()

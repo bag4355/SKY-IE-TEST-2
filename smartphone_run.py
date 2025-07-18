@@ -46,19 +46,22 @@ change_pen= V["cost_terms"]["change"]
 # Production & wage cost loop
 for t, f, s in V["ProdR"].keys():
     iso = dp.iso_site[f]
-    fx  = dp.FX_RATE[(week_monday(t), iso)]
+    fx_date = t if isinstance(t, dt.date) else t.start_time.date()
+    fx  = dp.FX_RATE[(fx_date, iso)]
     base = dp.prod_cost.loc[(dp.prod_cost.factory == f) &
                             (dp.prod_cost.sku == s),
-                            "base_cost_local"].iloc[0] / fx
-    wage = dp.lab_pol.loc[dp.lab_pol.country == iso,
-                          "regular_wage_local"].iloc[0] / fx
+                            "base_cost_usd"].iloc[0]
+    wage = dp.lab_pol.loc[
+        (dp.lab_pol.country == iso) &
+        (dp.lab_pol.year == fx_date.year),
+        "regular_wage_local"
+    ].iloc[0] / fx
     otmul= dp.lab_pol.loc[dp.lab_pol.country == iso,
                           "ot_mult"].iloc[0]
     hrs  = dp.lab_req.loc[dp.lab_req.sku == s,
                           "labour_hours_per_unit"].iloc[0]
-    # holiday?
-    is_hol = t.date() in dp.holiday.loc[dp.holiday.country == iso, "date"].dt.date.tolist() \
-             if isinstance(t, dt.date) else False
+    date_val = t if isinstance(t, dt.date) else t.start_time.date()
+    is_hol = date_val in dp.holiday.loc[dp.holiday.country == iso, "date"].dt.date.tolist()
     # regular
     prod_cost += base * V["ProdR"][t, f, s]
     prod_cost += wage * hrs * V["ProdR"][t, f, s] * (otmul if is_hol else 1)
