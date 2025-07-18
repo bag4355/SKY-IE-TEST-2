@@ -1,0 +1,784 @@
+country,date,holiday_name
+USA,2018-01-01,New Year's Day
+USA,2018-05-28,Memorial Day
+USA,2018-07-04,Independence Day
+USA,2018-09-03,Labor Day
+USA,2018-11-11,Veterans Day
+USA,2018-11-12,Veterans Day (observed)
+USA,2018-11-22,Thanksgiving Day
+USA,2018-12-25,Christmas Day
+USA,2018-01-15,Martin Luther King Jr. Day
+USA,2018-02-19,Washington's Birthday
+USA,2018-10-08,Columbus Day
+USA,2019-01-01,New Year's Day
+USA,2019-05-27,Memorial Day
+USA,2019-07-04,Independence Day
+USA,2019-09-02,Labor Day
+USA,2019-11-11,Veterans Day
+USA,2019-11-28,Thanksgiving Day
+USA,2019-12-25,Christmas Day
+USA,2019-01-21,Martin Luther King Jr. Day
+USA,2019-02-18,Washington's Birthday
+USA,2019-10-14,Columbus Day
+USA,2020-01-01,New Year's Day
+USA,2020-05-25,Memorial Day
+USA,2020-07-04,Independence Day
+USA,2020-07-03,Independence Day (observed)
+USA,2020-09-07,Labor Day
+USA,2020-11-11,Veterans Day
+USA,2020-11-26,Thanksgiving Day
+USA,2020-12-25,Christmas Day
+USA,2020-01-20,Martin Luther King Jr. Day
+USA,2020-02-17,Washington's Birthday
+USA,2020-10-12,Columbus Day
+USA,2021-01-01,New Year's Day
+USA,2021-12-31,New Year's Day (observed)
+USA,2021-05-31,Memorial Day
+USA,2021-06-19,Juneteenth National Independence Day
+USA,2021-06-18,Juneteenth National Independence Day (observed)
+USA,2021-07-04,Independence Day
+USA,2021-07-05,Independence Day (observed)
+USA,2021-09-06,Labor Day
+USA,2021-11-11,Veterans Day
+USA,2021-11-25,Thanksgiving Day
+USA,2021-12-25,Christmas Day
+USA,2021-12-24,Christmas Day (observed)
+USA,2021-01-18,Martin Luther King Jr. Day
+USA,2021-02-15,Washington's Birthday
+USA,2021-10-11,Columbus Day
+USA,2022-01-01,New Year's Day
+USA,2022-05-30,Memorial Day
+USA,2022-06-19,Juneteenth National Independence Day
+USA,2022-06-20,Juneteenth National Independence Day (observed)
+USA,2022-07-04,Independence Day
+USA,2022-09-05,Labor Day
+USA,2022-11-11,Veterans Day
+USA,2022-11-24,Thanksgiving Day
+USA,2022-12-25,Christmas Day
+USA,2022-12-26,Christmas Day (observed)
+USA,2022-01-17,Martin Luther King Jr. Day
+USA,2022-02-21,Washington's Birthday
+USA,2022-10-10,Columbus Day
+USA,2023-01-01,New Year's Day
+USA,2023-01-02,New Year's Day (observed)
+USA,2023-05-29,Memorial Day
+USA,2023-06-19,Juneteenth National Independence Day
+USA,2023-07-04,Independence Day
+USA,2023-09-04,Labor Day
+USA,2023-11-11,Veterans Day
+USA,2023-11-10,Veterans Day (observed)
+USA,2023-11-23,Thanksgiving Day
+USA,2023-12-25,Christmas Day
+USA,2023-01-16,Martin Luther King Jr. Day
+USA,2023-02-20,Washington's Birthday
+USA,2023-10-09,Columbus Day
+USA,2024-01-01,New Year's Day
+USA,2024-05-27,Memorial Day
+USA,2024-06-19,Juneteenth National Independence Day
+USA,2024-07-04,Independence Day
+USA,2024-09-02,Labor Day
+USA,2024-11-11,Veterans Day
+USA,2024-11-28,Thanksgiving Day
+USA,2024-12-25,Christmas Day
+USA,2024-01-15,Martin Luther King Jr. Day
+USA,2024-02-19,Washington's Birthday
+USA,2024-10-14,Columbus Day
+DEU,2018-01-01,New Year's Day
+DEU,2018-03-30,Good Friday
+DEU,2018-04-02,Easter Monday
+DEU,2018-05-01,Labor Day
+DEU,2018-05-10,Ascension Day
+DEU,2018-05-21,Whit Monday
+DEU,2018-10-03,German Unity Day
+DEU,2018-12-25,Christmas Day
+DEU,2018-12-26,Second Day of Christmas
+DEU,2019-01-01,New Year's Day
+DEU,2019-04-19,Good Friday
+DEU,2019-04-22,Easter Monday
+DEU,2019-05-01,Labor Day
+DEU,2019-05-30,Ascension Day
+DEU,2019-06-10,Whit Monday
+DEU,2019-10-03,German Unity Day
+DEU,2019-12-25,Christmas Day
+DEU,2019-12-26,Second Day of Christmas
+DEU,2020-01-01,New Year's Day
+DEU,2020-04-10,Good Friday
+DEU,2020-04-13,Easter Monday
+DEU,2020-05-01,Labor Day
+DEU,2020-05-21,Ascension Day
+DEU,2020-06-01,Whit Monday
+DEU,2020-10-03,German Unity Day
+DEU,2020-12-25,Christmas Day
+DEU,2020-12-26,Second Day of Christmas
+DEU,2021-01-01,New Year's Day
+DEU,2021-04-02,Good Friday
+DEU,2021-04-05,Easter Monday
+DEU,2021-05-01,Labor Day
+DEU,2021-05-13,Ascension Day
+DEU,2021-05-24,Whit Monday
+DEU,2021-10-03,German Unity Day
+DEU,2021-12-25,Christmas Day
+DEU,2021-12-26,Second Day of Christmas
+DEU,2022-01-01,New Year's Day
+DEU,2022-04-15,Good Friday
+DEU,2022-04-18,Easter Monday
+DEU,2022-05-01,Labor Day
+DEU,2022-05-26,Ascension Day
+DEU,2022-06-06,Whit Monday
+DEU,2022-10-03,German Unity Day
+DEU,2022-12-25,Christmas Day
+DEU,2022-12-26,Second Day of Christmas
+DEU,2023-01-01,New Year's Day
+DEU,2023-04-07,Good Friday
+DEU,2023-04-10,Easter Monday
+DEU,2023-05-01,Labor Day
+DEU,2023-05-18,Ascension Day
+DEU,2023-05-29,Whit Monday
+DEU,2023-10-03,German Unity Day
+DEU,2023-12-25,Christmas Day
+DEU,2023-12-26,Second Day of Christmas
+DEU,2024-01-01,New Year's Day
+DEU,2024-03-29,Good Friday
+DEU,2024-04-01,Easter Monday
+DEU,2024-05-01,Labor Day
+DEU,2024-05-09,Ascension Day
+DEU,2024-05-20,Whit Monday
+DEU,2024-10-03,German Unity Day
+DEU,2024-12-25,Christmas Day
+DEU,2024-12-26,Second Day of Christmas
+FRA,2018-01-01,New Year's Day
+FRA,2018-05-01,Labor Day
+FRA,2018-05-08,Victory Day
+FRA,2018-07-14,National Day
+FRA,2018-11-11,Armistice Day
+FRA,2018-04-02,Easter Monday
+FRA,2018-05-21,Whit Monday
+FRA,2018-05-10,Ascension Day
+FRA,2018-08-15,Assumption Day
+FRA,2018-11-01,All Saints' Day
+FRA,2018-12-25,Christmas Day
+FRA,2019-01-01,New Year's Day
+FRA,2019-05-01,Labor Day
+FRA,2019-05-08,Victory Day
+FRA,2019-07-14,National Day
+FRA,2019-11-11,Armistice Day
+FRA,2019-04-22,Easter Monday
+FRA,2019-06-10,Whit Monday
+FRA,2019-05-30,Ascension Day
+FRA,2019-08-15,Assumption Day
+FRA,2019-11-01,All Saints' Day
+FRA,2019-12-25,Christmas Day
+FRA,2020-01-01,New Year's Day
+FRA,2020-05-01,Labor Day
+FRA,2020-05-08,Victory Day
+FRA,2020-07-14,National Day
+FRA,2020-11-11,Armistice Day
+FRA,2020-04-13,Easter Monday
+FRA,2020-06-01,Whit Monday
+FRA,2020-05-21,Ascension Day
+FRA,2020-08-15,Assumption Day
+FRA,2020-11-01,All Saints' Day
+FRA,2020-12-25,Christmas Day
+FRA,2021-01-01,New Year's Day
+FRA,2021-05-01,Labor Day
+FRA,2021-05-08,Victory Day
+FRA,2021-07-14,National Day
+FRA,2021-11-11,Armistice Day
+FRA,2021-04-05,Easter Monday
+FRA,2021-05-24,Whit Monday
+FRA,2021-05-13,Ascension Day
+FRA,2021-08-15,Assumption Day
+FRA,2021-11-01,All Saints' Day
+FRA,2021-12-25,Christmas Day
+FRA,2022-01-01,New Year's Day
+FRA,2022-05-01,Labor Day
+FRA,2022-05-08,Victory Day
+FRA,2022-07-14,National Day
+FRA,2022-11-11,Armistice Day
+FRA,2022-04-18,Easter Monday
+FRA,2022-06-06,Whit Monday
+FRA,2022-05-26,Ascension Day
+FRA,2022-08-15,Assumption Day
+FRA,2022-11-01,All Saints' Day
+FRA,2022-12-25,Christmas Day
+FRA,2023-01-01,New Year's Day
+FRA,2023-05-01,Labor Day
+FRA,2023-05-08,Victory Day
+FRA,2023-07-14,National Day
+FRA,2023-11-11,Armistice Day
+FRA,2023-04-10,Easter Monday
+FRA,2023-05-29,Whit Monday
+FRA,2023-05-18,Ascension Day
+FRA,2023-08-15,Assumption Day
+FRA,2023-11-01,All Saints' Day
+FRA,2023-12-25,Christmas Day
+FRA,2024-01-01,New Year's Day
+FRA,2024-05-01,Labor Day
+FRA,2024-05-08,Victory Day
+FRA,2024-07-14,National Day
+FRA,2024-11-11,Armistice Day
+FRA,2024-04-01,Easter Monday
+FRA,2024-05-20,Whit Monday
+FRA,2024-05-09,Ascension Day
+FRA,2024-08-15,Assumption Day
+FRA,2024-11-01,All Saints' Day
+FRA,2024-12-25,Christmas Day
+KOR,2018-01-01,New Year's Day
+KOR,2018-02-16,Korean New Year
+KOR,2018-02-15,The day preceding Korean New Year
+KOR,2018-02-17,The second day of Korean New Year
+KOR,2018-03-01,Independence Movement Day
+KOR,2018-05-22,Buddha's Birthday
+KOR,2018-05-05,Children's Day
+KOR,2018-06-06,Memorial Day
+KOR,2018-08-15,Liberation Day
+KOR,2018-10-03,National Foundation Day
+KOR,2018-10-09,Hangul Day
+KOR,2018-09-24,Chuseok
+KOR,2018-09-23,The day preceding Chuseok
+KOR,2018-09-25,The second day of Chuseok
+KOR,2018-12-25,Christmas Day
+KOR,2018-06-13,Local Election Day
+KOR,2018-05-07,Alternative holiday for Children's Day
+KOR,2018-09-26,Alternative holiday for Chuseok
+KOR,2019-01-01,New Year's Day
+KOR,2019-02-05,Korean New Year
+KOR,2019-02-04,The day preceding Korean New Year
+KOR,2019-02-06,The second day of Korean New Year
+KOR,2019-03-01,Independence Movement Day
+KOR,2019-05-12,Buddha's Birthday
+KOR,2019-05-05,Children's Day
+KOR,2019-06-06,Memorial Day
+KOR,2019-08-15,Liberation Day
+KOR,2019-10-03,National Foundation Day
+KOR,2019-10-09,Hangul Day
+KOR,2019-09-13,Chuseok
+KOR,2019-09-12,The day preceding Chuseok
+KOR,2019-09-14,The second day of Chuseok
+KOR,2019-12-25,Christmas Day
+KOR,2019-05-06,Alternative holiday for Children's Day
+KOR,2020-01-01,New Year's Day
+KOR,2020-01-25,Korean New Year
+KOR,2020-01-24,The day preceding Korean New Year
+KOR,2020-01-26,The second day of Korean New Year
+KOR,2020-03-01,Independence Movement Day
+KOR,2020-04-30,Buddha's Birthday
+KOR,2020-05-05,Children's Day
+KOR,2020-06-06,Memorial Day
+KOR,2020-08-15,Liberation Day
+KOR,2020-10-03,National Foundation Day
+KOR,2020-10-09,Hangul Day
+KOR,2020-10-01,Chuseok
+KOR,2020-09-30,The day preceding Chuseok
+KOR,2020-10-02,The second day of Chuseok
+KOR,2020-12-25,Christmas Day
+KOR,2020-04-15,National Assembly Election Day
+KOR,2020-01-27,Alternative holiday for Korean New Year
+KOR,2020-08-17,Temporary Public Holiday
+KOR,2021-01-01,New Year's Day
+KOR,2021-02-12,Korean New Year
+KOR,2021-02-11,The day preceding Korean New Year
+KOR,2021-02-13,The second day of Korean New Year
+KOR,2021-03-01,Independence Movement Day
+KOR,2021-05-19,Buddha's Birthday
+KOR,2021-05-05,Children's Day
+KOR,2021-06-06,Memorial Day
+KOR,2021-08-15,Liberation Day
+KOR,2021-10-03,National Foundation Day
+KOR,2021-10-09,Hangul Day
+KOR,2021-09-21,Chuseok
+KOR,2021-09-20,The day preceding Chuseok
+KOR,2021-09-22,The second day of Chuseok
+KOR,2021-12-25,Christmas Day
+KOR,2021-08-16,Alternative holiday for Liberation Day
+KOR,2021-10-04,Alternative holiday for National Foundation Day
+KOR,2021-10-11,Alternative holiday for Hangul Day
+KOR,2022-01-01,New Year's Day
+KOR,2022-02-01,Korean New Year
+KOR,2022-01-31,The day preceding Korean New Year
+KOR,2022-02-02,The second day of Korean New Year
+KOR,2022-03-01,Independence Movement Day
+KOR,2022-05-08,Buddha's Birthday
+KOR,2022-05-05,Children's Day
+KOR,2022-06-06,Memorial Day
+KOR,2022-08-15,Liberation Day
+KOR,2022-10-03,National Foundation Day
+KOR,2022-10-09,Hangul Day
+KOR,2022-09-10,Chuseok
+KOR,2022-09-09,The day preceding Chuseok
+KOR,2022-09-11,The second day of Chuseok
+KOR,2022-12-25,Christmas Day
+KOR,2022-03-09,Presidential Election Day
+KOR,2022-06-01,Local Election Day
+KOR,2022-09-12,Alternative holiday for Chuseok
+KOR,2022-10-10,Alternative holiday for Hangul Day
+KOR,2023-01-01,New Year's Day
+KOR,2023-01-22,Korean New Year
+KOR,2023-01-21,The day preceding Korean New Year
+KOR,2023-01-23,The second day of Korean New Year
+KOR,2023-03-01,Independence Movement Day
+KOR,2023-05-27,Buddha's Birthday
+KOR,2023-05-05,Children's Day
+KOR,2023-06-06,Memorial Day
+KOR,2023-08-15,Liberation Day
+KOR,2023-10-03,National Foundation Day
+KOR,2023-10-09,Hangul Day
+KOR,2023-09-29,Chuseok
+KOR,2023-09-28,The day preceding Chuseok
+KOR,2023-09-30,The second day of Chuseok
+KOR,2023-12-25,Christmas Day
+KOR,2023-01-24,Alternative holiday for Korean New Year
+KOR,2023-05-29,Alternative holiday for Buddha's Birthday
+KOR,2023-10-02,Temporary Public Holiday
+KOR,2024-01-01,New Year's Day
+KOR,2024-02-10,Korean New Year
+KOR,2024-02-09,The day preceding Korean New Year
+KOR,2024-02-11,The second day of Korean New Year
+KOR,2024-03-01,Independence Movement Day
+KOR,2024-05-15,Buddha's Birthday
+KOR,2024-05-05,Children's Day
+KOR,2024-06-06,Memorial Day
+KOR,2024-08-15,Liberation Day
+KOR,2024-10-03,National Foundation Day
+KOR,2024-10-09,Hangul Day
+KOR,2024-09-17,Chuseok
+KOR,2024-09-16,The day preceding Chuseok
+KOR,2024-09-18,The second day of Chuseok
+KOR,2024-12-25,Christmas Day
+KOR,2024-04-10,National Assembly Election Day
+KOR,2024-02-12,Alternative holiday for Korean New Year
+KOR,2024-05-06,Alternative holiday for Children's Day
+KOR,2024-10-01,Armed Forces Day
+JPN,2018-01-01,New Year's Day
+JPN,2018-01-08,Coming of Age Day
+JPN,2018-02-11,Foundation Day
+JPN,2018-03-21,Vernal Equinox Day
+JPN,2018-04-29,Showa Day
+JPN,2018-05-03,Constitution Day
+JPN,2018-05-04,Greenery Day
+JPN,2018-05-05,Children's Day
+JPN,2018-07-16,Marine Day
+JPN,2018-08-11,Mountain Day
+JPN,2018-09-17,Respect for the Aged Day
+JPN,2018-09-23,Autumnal Equinox
+JPN,2018-10-08,Physical Education Day
+JPN,2018-11-03,Culture Day
+JPN,2018-11-23,Labor Thanksgiving Day
+JPN,2018-12-23,Emperor's Birthday
+JPN,2018-02-12,Substitute Holiday
+JPN,2018-04-30,Substitute Holiday
+JPN,2018-09-24,Substitute Holiday
+JPN,2018-12-24,Substitute Holiday
+JPN,2019-01-01,New Year's Day
+JPN,2019-01-14,Coming of Age Day
+JPN,2019-02-11,Foundation Day
+JPN,2019-03-21,Vernal Equinox Day
+JPN,2019-04-29,Showa Day
+JPN,2019-05-03,Constitution Day
+JPN,2019-05-04,Greenery Day
+JPN,2019-05-05,Children's Day
+JPN,2019-07-15,Marine Day
+JPN,2019-08-11,Mountain Day
+JPN,2019-09-16,Respect for the Aged Day
+JPN,2019-09-23,Autumnal Equinox
+JPN,2019-10-14,Physical Education Day
+JPN,2019-11-03,Culture Day
+JPN,2019-11-23,Labor Thanksgiving Day
+JPN,2019-05-06,Substitute Holiday
+JPN,2019-08-12,Substitute Holiday
+JPN,2019-11-04,Substitute Holiday
+JPN,2019-05-01,Emperor's Enthronement Day
+JPN,2019-10-22,Emperor's Enthronement Day
+JPN,2019-04-30,National Holiday
+JPN,2019-05-02,National Holiday
+JPN,2020-01-01,New Year's Day
+JPN,2020-01-13,Coming of Age Day
+JPN,2020-02-11,Foundation Day
+JPN,2020-02-23,Emperor's Birthday
+JPN,2020-03-20,Vernal Equinox Day
+JPN,2020-04-29,Showa Day
+JPN,2020-05-03,Constitution Day
+JPN,2020-05-04,Greenery Day
+JPN,2020-05-05,Children's Day
+JPN,2020-07-23,Marine Day
+JPN,2020-08-10,Mountain Day
+JPN,2020-09-21,Respect for the Aged Day
+JPN,2020-09-22,Autumnal Equinox
+JPN,2020-07-24,Sports Day
+JPN,2020-11-03,Culture Day
+JPN,2020-11-23,Labor Thanksgiving Day
+JPN,2020-02-24,Substitute Holiday
+JPN,2020-05-06,Substitute Holiday
+JPN,2021-01-01,New Year's Day
+JPN,2021-01-11,Coming of Age Day
+JPN,2021-02-11,Foundation Day
+JPN,2021-02-23,Emperor's Birthday
+JPN,2021-03-20,Vernal Equinox Day
+JPN,2021-04-29,Showa Day
+JPN,2021-05-03,Constitution Day
+JPN,2021-05-04,Greenery Day
+JPN,2021-05-05,Children's Day
+JPN,2021-07-22,Marine Day
+JPN,2021-08-08,Mountain Day
+JPN,2021-09-20,Respect for the Aged Day
+JPN,2021-09-23,Autumnal Equinox
+JPN,2021-07-23,Sports Day
+JPN,2021-11-03,Culture Day
+JPN,2021-11-23,Labor Thanksgiving Day
+JPN,2021-08-09,Substitute Holiday
+JPN,2022-01-01,New Year's Day
+JPN,2022-01-10,Coming of Age Day
+JPN,2022-02-11,Foundation Day
+JPN,2022-02-23,Emperor's Birthday
+JPN,2022-03-21,Vernal Equinox Day
+JPN,2022-04-29,Showa Day
+JPN,2022-05-03,Constitution Day
+JPN,2022-05-04,Greenery Day
+JPN,2022-05-05,Children's Day
+JPN,2022-07-18,Marine Day
+JPN,2022-08-11,Mountain Day
+JPN,2022-09-19,Respect for the Aged Day
+JPN,2022-09-23,Autumnal Equinox
+JPN,2022-10-10,Sports Day
+JPN,2022-11-03,Culture Day
+JPN,2022-11-23,Labor Thanksgiving Day
+JPN,2023-01-01,New Year's Day
+JPN,2023-01-09,Coming of Age Day
+JPN,2023-02-11,Foundation Day
+JPN,2023-02-23,Emperor's Birthday
+JPN,2023-03-21,Vernal Equinox Day
+JPN,2023-04-29,Showa Day
+JPN,2023-05-03,Constitution Day
+JPN,2023-05-04,Greenery Day
+JPN,2023-05-05,Children's Day
+JPN,2023-07-17,Marine Day
+JPN,2023-08-11,Mountain Day
+JPN,2023-09-18,Respect for the Aged Day
+JPN,2023-09-23,Autumnal Equinox
+JPN,2023-10-09,Sports Day
+JPN,2023-11-03,Culture Day
+JPN,2023-11-23,Labor Thanksgiving Day
+JPN,2023-01-02,Substitute Holiday
+JPN,2024-01-01,New Year's Day
+JPN,2024-01-08,Coming of Age Day
+JPN,2024-02-11,Foundation Day
+JPN,2024-02-23,Emperor's Birthday
+JPN,2024-03-20,Vernal Equinox Day
+JPN,2024-04-29,Showa Day
+JPN,2024-05-03,Constitution Day
+JPN,2024-05-04,Greenery Day
+JPN,2024-05-05,Children's Day
+JPN,2024-07-15,Marine Day
+JPN,2024-08-11,Mountain Day
+JPN,2024-09-16,Respect for the Aged Day
+JPN,2024-09-22,Autumnal Equinox
+JPN,2024-10-14,Sports Day
+JPN,2024-11-03,Culture Day
+JPN,2024-11-23,Labor Thanksgiving Day
+JPN,2024-02-12,Substitute Holiday
+JPN,2024-05-06,Substitute Holiday
+JPN,2024-08-12,Substitute Holiday
+JPN,2024-09-23,Substitute Holiday
+JPN,2024-11-04,Substitute Holiday
+GBR,2018-03-30,Good Friday
+GBR,2018-05-07,May Day
+GBR,2018-05-28,Spring Bank Holiday
+GBR,2018-01-01,New Year's Day
+GBR,2018-12-25,Christmas Day
+GBR,2018-12-26,Boxing Day
+GBR,2019-04-19,Good Friday
+GBR,2019-05-06,May Day
+GBR,2019-05-27,Spring Bank Holiday
+GBR,2019-01-01,New Year's Day
+GBR,2019-12-25,Christmas Day
+GBR,2019-12-26,Boxing Day
+GBR,2020-04-10,Good Friday
+GBR,2020-05-08,May Day
+GBR,2020-05-25,Spring Bank Holiday
+GBR,2020-01-01,New Year's Day
+GBR,2020-12-25,Christmas Day
+GBR,2020-12-26,Boxing Day
+GBR,2020-12-28,Boxing Day (observed)
+GBR,2021-04-02,Good Friday
+GBR,2021-05-03,May Day
+GBR,2021-05-31,Spring Bank Holiday
+GBR,2021-01-01,New Year's Day
+GBR,2021-12-25,Christmas Day
+GBR,2021-12-27,Christmas Day (observed)
+GBR,2021-12-26,Boxing Day
+GBR,2021-12-28,Boxing Day (observed)
+GBR,2022-04-15,Good Friday
+GBR,2022-05-02,May Day
+GBR,2022-06-02,Spring Bank Holiday
+GBR,2022-06-03,Platinum Jubilee of Elizabeth II
+GBR,2022-09-19,State Funeral of Queen Elizabeth II
+GBR,2022-01-01,New Year's Day
+GBR,2022-01-03,New Year's Day (observed)
+GBR,2022-12-25,Christmas Day
+GBR,2022-12-27,Christmas Day (observed)
+GBR,2022-12-26,Boxing Day
+GBR,2023-04-07,Good Friday
+GBR,2023-05-01,May Day
+GBR,2023-05-29,Spring Bank Holiday
+GBR,2023-05-08,Coronation of Charles III
+GBR,2023-01-01,New Year's Day
+GBR,2023-01-02,New Year's Day (observed)
+GBR,2023-12-25,Christmas Day
+GBR,2023-12-26,Boxing Day
+GBR,2024-03-29,Good Friday
+GBR,2024-05-06,May Day
+GBR,2024-05-27,Spring Bank Holiday
+GBR,2024-01-01,New Year's Day
+GBR,2024-12-25,Christmas Day
+GBR,2024-12-26,Boxing Day
+CAN,2018-01-01,New Year's Day
+CAN,2018-03-30,Good Friday
+CAN,2018-07-01,Canada Day
+CAN,2018-09-03,Labor Day
+CAN,2018-12-25,Christmas Day
+CAN,2019-01-01,New Year's Day
+CAN,2019-04-19,Good Friday
+CAN,2019-07-01,Canada Day
+CAN,2019-09-02,Labor Day
+CAN,2019-12-25,Christmas Day
+CAN,2020-01-01,New Year's Day
+CAN,2020-04-10,Good Friday
+CAN,2020-07-01,Canada Day
+CAN,2020-09-07,Labor Day
+CAN,2020-12-25,Christmas Day
+CAN,2021-01-01,New Year's Day
+CAN,2021-04-02,Good Friday
+CAN,2021-07-01,Canada Day
+CAN,2021-09-06,Labor Day
+CAN,2021-12-25,Christmas Day
+CAN,2021-12-27,Christmas Day (observed)
+CAN,2022-01-01,New Year's Day
+CAN,2022-01-03,New Year's Day (observed)
+CAN,2022-04-15,Good Friday
+CAN,2022-07-01,Canada Day
+CAN,2022-09-05,Labor Day
+CAN,2022-12-25,Christmas Day
+CAN,2022-12-26,Christmas Day (observed)
+CAN,2023-01-01,New Year's Day
+CAN,2023-01-02,New Year's Day (observed)
+CAN,2023-04-07,Good Friday
+CAN,2023-07-01,Canada Day
+CAN,2023-09-04,Labor Day
+CAN,2023-12-25,Christmas Day
+CAN,2024-01-01,New Year's Day
+CAN,2024-03-29,Good Friday
+CAN,2024-07-01,Canada Day
+CAN,2024-09-02,Labor Day
+CAN,2024-12-25,Christmas Day
+AUS,2018-03-30,Good Friday
+AUS,2018-04-02,Easter Monday
+AUS,2018-01-01,New Year's Day
+AUS,2018-01-26,Australia Day
+AUS,2018-04-25,ANZAC Day
+AUS,2018-12-25,Christmas Day
+AUS,2018-12-26,Boxing Day
+AUS,2019-04-19,Good Friday
+AUS,2019-04-22,Easter Monday
+AUS,2019-01-01,New Year's Day
+AUS,2019-01-26,Australia Day
+AUS,2019-04-25,ANZAC Day
+AUS,2019-12-25,Christmas Day
+AUS,2019-12-26,Boxing Day
+AUS,2020-04-10,Good Friday
+AUS,2020-04-13,Easter Monday
+AUS,2020-01-01,New Year's Day
+AUS,2020-01-26,Australia Day
+AUS,2020-04-25,ANZAC Day
+AUS,2020-12-25,Christmas Day
+AUS,2020-12-26,Boxing Day
+AUS,2021-04-02,Good Friday
+AUS,2021-04-05,Easter Monday
+AUS,2021-01-01,New Year's Day
+AUS,2021-01-26,Australia Day
+AUS,2021-04-25,ANZAC Day
+AUS,2021-12-25,Christmas Day
+AUS,2021-12-26,Boxing Day
+AUS,2022-04-15,Good Friday
+AUS,2022-04-18,Easter Monday
+AUS,2022-01-01,New Year's Day
+AUS,2022-01-26,Australia Day
+AUS,2022-04-25,ANZAC Day
+AUS,2022-12-25,Christmas Day
+AUS,2022-12-26,Boxing Day
+AUS,2022-09-22,National Day of Mourning for Queen Elizabeth II
+AUS,2023-04-07,Good Friday
+AUS,2023-04-10,Easter Monday
+AUS,2023-01-01,New Year's Day
+AUS,2023-01-26,Australia Day
+AUS,2023-04-25,ANZAC Day
+AUS,2023-12-25,Christmas Day
+AUS,2023-12-26,Boxing Day
+AUS,2024-03-29,Good Friday
+AUS,2024-04-01,Easter Monday
+AUS,2024-01-01,New Year's Day
+AUS,2024-01-26,Australia Day
+AUS,2024-04-25,ANZAC Day
+AUS,2024-12-25,Christmas Day
+AUS,2024-12-26,Boxing Day
+BRA,2018-01-01,Universal Fraternization Day
+BRA,2018-03-30,Good Friday
+BRA,2018-04-21,Tiradentes' Day
+BRA,2018-05-01,Worker's Day
+BRA,2018-09-07,Independence Day
+BRA,2018-10-12,Our Lady of Aparecida
+BRA,2018-11-02,All Souls' Day
+BRA,2018-11-15,Republic Proclamation Day
+BRA,2018-12-25,Christmas Day
+BRA,2019-01-01,Universal Fraternization Day
+BRA,2019-04-19,Good Friday
+BRA,2019-04-21,Tiradentes' Day
+BRA,2019-05-01,Worker's Day
+BRA,2019-09-07,Independence Day
+BRA,2019-10-12,Our Lady of Aparecida
+BRA,2019-11-02,All Souls' Day
+BRA,2019-11-15,Republic Proclamation Day
+BRA,2019-12-25,Christmas Day
+BRA,2020-01-01,Universal Fraternization Day
+BRA,2020-04-10,Good Friday
+BRA,2020-04-21,Tiradentes' Day
+BRA,2020-05-01,Worker's Day
+BRA,2020-09-07,Independence Day
+BRA,2020-10-12,Our Lady of Aparecida
+BRA,2020-11-02,All Souls' Day
+BRA,2020-11-15,Republic Proclamation Day
+BRA,2020-12-25,Christmas Day
+BRA,2021-01-01,Universal Fraternization Day
+BRA,2021-04-02,Good Friday
+BRA,2021-04-21,Tiradentes' Day
+BRA,2021-05-01,Worker's Day
+BRA,2021-09-07,Independence Day
+BRA,2021-10-12,Our Lady of Aparecida
+BRA,2021-11-02,All Souls' Day
+BRA,2021-11-15,Republic Proclamation Day
+BRA,2021-12-25,Christmas Day
+BRA,2022-01-01,Universal Fraternization Day
+BRA,2022-04-15,Good Friday
+BRA,2022-04-21,Tiradentes' Day
+BRA,2022-05-01,Worker's Day
+BRA,2022-09-07,Independence Day
+BRA,2022-10-12,Our Lady of Aparecida
+BRA,2022-11-02,All Souls' Day
+BRA,2022-11-15,Republic Proclamation Day
+BRA,2022-12-25,Christmas Day
+BRA,2023-01-01,Universal Fraternization Day
+BRA,2023-04-07,Good Friday
+BRA,2023-04-21,Tiradentes' Day
+BRA,2023-05-01,Worker's Day
+BRA,2023-09-07,Independence Day
+BRA,2023-10-12,Our Lady of Aparecida
+BRA,2023-11-02,All Souls' Day
+BRA,2023-11-15,Republic Proclamation Day
+BRA,2023-12-25,Christmas Day
+BRA,2024-01-01,Universal Fraternization Day
+BRA,2024-03-29,Good Friday
+BRA,2024-04-21,Tiradentes' Day
+BRA,2024-05-01,Worker's Day
+BRA,2024-09-07,Independence Day
+BRA,2024-10-12,Our Lady of Aparecida
+BRA,2024-11-02,All Souls' Day
+BRA,2024-11-15,Republic Proclamation Day
+BRA,2024-11-20,National Day of Zumbi and Black Awareness
+BRA,2024-12-25,Christmas Day
+ZAF,2018-01-01,New Year's Day
+ZAF,2018-03-30,Good Friday
+ZAF,2018-04-02,Family Day
+ZAF,2018-12-16,Day of Reconciliation
+ZAF,2018-12-17,Day of Reconciliation (observed)
+ZAF,2018-12-25,Christmas Day
+ZAF,2018-12-26,Day of Goodwill
+ZAF,2018-03-21,Human Rights Day
+ZAF,2018-04-27,Freedom Day
+ZAF,2018-05-01,Workers' Day
+ZAF,2018-06-16,Youth Day
+ZAF,2018-08-09,National Women's Day
+ZAF,2018-09-24,Heritage Day
+ZAF,2019-01-01,New Year's Day
+ZAF,2019-04-19,Good Friday
+ZAF,2019-04-22,Family Day
+ZAF,2019-12-16,Day of Reconciliation
+ZAF,2019-12-25,Christmas Day
+ZAF,2019-12-26,Day of Goodwill
+ZAF,2019-03-21,Human Rights Day
+ZAF,2019-04-27,Freedom Day
+ZAF,2019-05-01,Workers' Day
+ZAF,2019-06-16,Youth Day
+ZAF,2019-06-17,Youth Day (observed)
+ZAF,2019-08-09,National Women's Day
+ZAF,2019-09-24,Heritage Day
+ZAF,2019-05-08,National and provincial government elections
+ZAF,2020-01-01,New Year's Day
+ZAF,2020-04-10,Good Friday
+ZAF,2020-04-13,Family Day
+ZAF,2020-12-16,Day of Reconciliation
+ZAF,2020-12-25,Christmas Day
+ZAF,2020-12-26,Day of Goodwill
+ZAF,2020-03-21,Human Rights Day
+ZAF,2020-04-27,Freedom Day
+ZAF,2020-05-01,Workers' Day
+ZAF,2020-06-16,Youth Day
+ZAF,2020-08-09,National Women's Day
+ZAF,2020-08-10,National Women's Day (observed)
+ZAF,2020-09-24,Heritage Day
+ZAF,2021-01-01,New Year's Day
+ZAF,2021-04-02,Good Friday
+ZAF,2021-04-05,Family Day
+ZAF,2021-12-16,Day of Reconciliation
+ZAF,2021-12-25,Christmas Day
+ZAF,2021-12-26,Day of Goodwill
+ZAF,2021-12-27,Day of Goodwill (observed)
+ZAF,2021-03-21,Human Rights Day
+ZAF,2021-03-22,Human Rights Day (observed)
+ZAF,2021-04-27,Freedom Day
+ZAF,2021-05-01,Workers' Day
+ZAF,2021-06-16,Youth Day
+ZAF,2021-08-09,National Women's Day
+ZAF,2021-09-24,Heritage Day
+ZAF,2021-11-01,Municipal elections
+ZAF,2022-01-01,New Year's Day
+ZAF,2022-04-15,Good Friday
+ZAF,2022-04-18,Family Day
+ZAF,2022-12-16,Day of Reconciliation
+ZAF,2022-12-25,Christmas Day
+ZAF,2022-12-26,Day of Goodwill
+ZAF,2022-03-21,Human Rights Day
+ZAF,2022-04-27,Freedom Day
+ZAF,2022-05-01,Workers' Day
+ZAF,2022-05-02,Workers' Day (observed)
+ZAF,2022-06-16,Youth Day
+ZAF,2022-08-09,National Women's Day
+ZAF,2022-09-24,Heritage Day
+ZAF,2022-12-27,Public holiday by presidential decree
+ZAF,2023-01-01,New Year's Day
+ZAF,2023-01-02,New Year's Day (observed)
+ZAF,2023-04-07,Good Friday
+ZAF,2023-04-10,Family Day
+ZAF,2023-12-16,Day of Reconciliation
+ZAF,2023-12-25,Christmas Day
+ZAF,2023-12-26,Day of Goodwill
+ZAF,2023-03-21,Human Rights Day
+ZAF,2023-04-27,Freedom Day
+ZAF,2023-05-01,Workers' Day
+ZAF,2023-06-16,Youth Day
+ZAF,2023-08-09,National Women's Day
+ZAF,2023-09-24,Heritage Day
+ZAF,2023-09-25,Heritage Day (observed)
+ZAF,2023-12-15,Public holiday by presidential decree
+ZAF,2024-01-01,New Year's Day
+ZAF,2024-03-29,Good Friday
+ZAF,2024-04-01,Family Day
+ZAF,2024-12-16,Day of Reconciliation
+ZAF,2024-12-25,Christmas Day
+ZAF,2024-12-26,Day of Goodwill
+ZAF,2024-03-21,Human Rights Day
+ZAF,2024-04-27,Freedom Day
+ZAF,2024-05-01,Workers' Day
+ZAF,2024-06-16,Youth Day
+ZAF,2024-06-17,Youth Day (observed)
+ZAF,2024-08-09,National Women's Day
+ZAF,2024-09-24,Heritage Day
+ZAF,2024-05-29,National and provincial government elections
