@@ -18,7 +18,8 @@ import numpy as np
 import gurobipy as gp
 
 from smartphone_config_utils import (
-    BASE_DIR, CONTAINER_CAP, TON_PENALTY_USD,
+    BASE_DIR, CONTAINER_CAP, TON_PENALTY_USD, BIG_M,
+    MODES_FCWH,
     week_monday, ceil_div_expr
 )
 import smartphone_data_prep as dp
@@ -40,6 +41,7 @@ prod_cost = V["cost_terms"]["prod"]
 trans_cost= V["cost_terms"]["trans"]
 co2_prod  = V["cost_terms"]["co2p"]
 co2_tran  = V["cost_terms"]["co2t"]
+change_pen= V["cost_terms"]["change"]
 
 # Production & wage cost loop
 for t, f, s in V["ProdR"].keys():
@@ -85,9 +87,31 @@ for t, (w, c) in V["ShipW2C"].keys():
     trans_cost += base * multi * qty
     co2_tran   += dp.CO2_WH_CT[w, c] * qty
 
+# Mode change penalty (5% of prior 4-week cost)
+BLOCK_W = dp.oil_price["week"].unique().tolist()
+for b,dow,(f,h) in V["modeBlock"].keys():
+    if b == 0:
+        continue
+    prev_cost = gp.LinExpr()
+    for t,(ff,hh,mn) in V["ShipF2W"].keys():
+        if ff!=f or hh!=h or mn not in MODES_FCWH:
+            continue
+        widx = BLOCK_W.index(week_monday(t).to_period("W-MON"))
+        if widx//dp.MODE_BLOCK_WEEKS == b-1 and (t.weekday() if isinstance(t, dt.date) else 0)==dow:
+            base = dp.COST_FC_WH[f,h,mn] + dp.BORDER_FC_WH[f,h]
+            mul = 1.0
+            if t in dp.BAD_WEATHER_DATES: mul *= 3
+            if week_monday(t).to_period("W-MON") in dp.HIGH_OIL_WEEKS: mul *= 2
+            prev_cost += base * mul * V["ShipF2W"][t,(f,h,mn)]
+    pen = mdl.addVar(lb=0.0, name=f"Pen_{b}_{dow}_{f}_{h}")
+    mdl.addConstr(pen >= 0.05 * prev_cost - BIG_M*(1 - V["modeChange"][b,dow,(f,h)]))
+    mdl.addConstr(pen <= 0.05 * prev_cost)
+    mdl.addConstr(pen <= BIG_M * V["modeChange"][b,dow,(f,h)])
+    change_pen += pen
+
 # CO₂ Environmental fee
-env_fee = TON_PENALTY_USD * ceil_div_expr(co2_prod + co2_tran)
-mdl.setObjective(mdl.getObjective() + env_fee)
+env_fee = TON_PENALTY_USD * ceil_div_expr(co2_prod + co2_tran, 1000)
+mdl.setObjective(mdl.getObjective() + env_fee + change_pen)
 
 # ═══════════════ OPTIMISE ═════════════════════════════════════════════════
 print("⋆  Optimising (threads={}, weekly={}) …".format(
