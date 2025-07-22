@@ -16,7 +16,7 @@ import math, datetime as dt
 from typing import Dict, Tuple, Iterable, Generator, List
 
 # ════════════════════ STATIC CONSTANTS ═════════════════════════════════════
-BASE_DIR        = "./smartphone_data_v22"
+BASE_DIR        = "./data"
 
 # Container & shipment
 CONTAINER_CAP   = 4_000                     # unit per container

@@ -80,6 +80,13 @@ def build_model(*, daily: bool = True, threads: int = 32):
     m.addConstr(openF.sum() <= 5, "MaxFactory")
     m.addConstr(openW.sum() <= 20, "MaxWarehouse")
 
+    # link facility activation to opening decision
+    for w in WEEKS:
+        for f in dp.FACTORIES:
+            m.addConstr(actF[w, f] <= openF[f], name=f"OpenLinkF_{w}_{f}")
+        for h in dp.WAREHOUSES:
+            m.addConstr(actW[w, h] <= openW[h], name=f"OpenLinkW_{w}_{h}")
+
     # ═══════════════ 1. PRODUCTION VARIABLES ═══════════════════════════════
     TSET = DAYS if daily else WEEKS
     ProdR = m.addVars(TSET, dp.FACTORIES, dp.SKUS,
@@ -149,30 +156,42 @@ def build_model(*, daily: bool = True, threads: int = 32):
 
     # ═══════════════ 2. SHIPMENT VARIABLES ═════════════════════════════════
     # ── Factory → Warehouse ────────────────────────────────────────────────
+    edges = {(f, h) for f, h, _ in dp.edges_FC_WH}
+    BLOCKS = range(math.ceil(len(WEEKS) / MODE_BLOCK_WEEKS))
     Ship_F2W = m.addVars(TSET, dp.edges_FC_WH, vtype=GRB.INTEGER, lb=0,
                          name="ShipF2W")
-    # mode‑usage indicator (edge, day, mode)  – ensures **single mode / day**
-    modeUsed = m.addVars(TSET, [(f, h) for f, h, _ in dp.edges_FC_WH],
-                         MODES_FCWH, vtype=GRB.BINARY, name="EdgeModeDay")
+    modeBlock = m.addVars(BLOCKS, range(7), list(edges), MODES_FCWH,
+                         vtype=GRB.BINARY, name="ModeBlock")
+    modeChange= m.addVars(BLOCKS, range(7), list(edges), vtype=GRB.BINARY,
+                         name="ModeChange")
+
+    for b in BLOCKS:
+        for dow in range(7):
+            for e in edges:
+                m.addConstr(gp.quicksum(modeBlock[b,dow,e,m]
+                                        for m in MODES_FCWH) <= 1)
 
     for t in TSET:
-        for f, h in {(f, h) for f, h, _ in dp.edges_FC_WH}:
-            # only one mode may be >0
-            m.addConstr(gp.quicksum(modeUsed[t, (f, h), m]
-                        for m in MODES_FCWH) <= 1,
-                        name=f"SingleMode_{t}_{f}_{h}")
-            for mname in MODES_FCWH:
-                if (f, h, mname) not in dp.edges_FC_WH:
-                    continue
-                # binding: Ship > 0 ⇒ modeUsed = 1
-                m.addConstr(Ship_F2W[t, (f, h, mname)] <=
-                            BIG_M * modeUsed[t, (f, h), mname])
-                # logical open sites
-                wh_week = week_monday(t).to_period("W-MON") if daily else t
-                m.addConstr(Ship_F2W[t, (f, h, mname)] <=
-                            BIG_M * actF[wh_week, f])
-                m.addConstr(Ship_F2W[t, (f, h, mname)] <=
-                            BIG_M * actW[wh_week, h])
+        widx = WEEKS.index(week_monday(t) if daily else t.start_time.date())
+        b = widx // MODE_BLOCK_WEEKS
+        dow = t.weekday() if daily else 0
+        wh_week = week_monday(t).to_period("W-MON") if daily else t
+        for f, h, mname in dp.edges_FC_WH:
+            if (f, h) not in edges:
+                continue
+            m.addConstr(Ship_F2W[t, (f, h, mname)] <=
+                        BIG_M * modeBlock[b,dow,(f,h),mname])
+            m.addConstr(Ship_F2W[t, (f, h, mname)] <= BIG_M * actF[wh_week, f])
+            m.addConstr(Ship_F2W[t, (f, h, mname)] <= BIG_M * actW[wh_week, h])
+
+    for b in BLOCKS[1:]:
+        for dow in range(7):
+            for e in edges:
+                for m in MODES_FCWH:
+                    m.addConstr(modeChange[b,dow,e] >=
+                                modeBlock[b-1,dow,e,m] - modeBlock[b,dow,e,m])
+                    m.addConstr(modeChange[b,dow,e] >=
+                                modeBlock[b,dow,e,m] - modeBlock[b-1,dow,e,m])
 
     # ── Warehouse → City (TRUCK only) ──────────────────────────────────────
     Ship_W2C = m.addVars(TSET, dp.edges_WH_CT, vtype=GRB.INTEGER, lb=0,
@@ -227,10 +246,12 @@ def build_model(*, daily: bool = True, threads: int = 32):
 
                 # Demand of the week
                 dem = 0
-                for d in (daterange(w.start_time.date(),
-                                    w.start_time.date()+dt.timedelta(6))):
-                    dem += dp.DEMAND_DICT.get((d, s, c), 0)  \
-                           if (h, (c := dp.iso_city.get(c))) in dp.edges_WH_CT else 0
+                week_days = daterange(w.start_time.date(),
+                                      w.start_time.date()+dt.timedelta(6))
+                for d in week_days:
+                    for city in dp.CITIES:
+                        if (h, city) in dp.edges_WH_CT:
+                            dem += dp.DEMAND_DICT.get((d, s, city), 0)
                 m.addConstr(dem - Short[w, h, s] <=
                             Inv[w, h, s, 0] + arrivals,
                             name=f"DemandSat_{w}_{h}_{s}")
@@ -254,18 +275,21 @@ def build_model(*, daily: bool = True, threads: int = 32):
     # CAPEX, Production cost, Transport cost, Inventory cost, Short/Env fees
     capex = gp.LinExpr()
     for f in dp.FACTORIES:
-        fx = dp.FX_RATE[(WEEKS[tipF[f].LB].start_time.date(), dp.iso_site[f])]
-        capex += openF[f] * dp.site_cost.loc[dp.site_cost.site_id == f,
-                                             "init_cost_local"].iloc[0] / fx
+        capex += openF[f] * dp.site_cost.loc[
+            dp.site_cost.site_id == f,
+            "init_cost_usd"
+        ].iloc[0]
     for h in dp.WAREHOUSES:
-        fx = dp.FX_RATE[(WEEKS[tipW[h].LB].start_time.date(), dp.iso_site[h])]
-        capex += openW[h] * dp.site_cost.loc[dp.site_cost.site_id == h,
-                                             "init_cost_local"].iloc[0] / fx
+        capex += openW[h] * dp.site_cost.loc[
+            dp.site_cost.site_id == h,
+            "init_cost_usd"
+        ].iloc[0]
 
     # Production & wage cost (OT / holiday premium handled in run‑module)
     prod_cost = gp.LinExpr()
     # Transport cost (with bad‑weather / oil multipliers)
     trans_cost = gp.LinExpr()
+    change_pen = gp.LinExpr()
     # Inventory & shortage
     inv_cost = gp.quicksum(
         Inv[w, h, s, a] * dp.inv_cost[s]
@@ -284,7 +308,7 @@ def build_model(*, daily: bool = True, threads: int = 32):
     # Placeholder objective (updated in run‑module)
     m.setObjective(capex + prod_cost + trans_cost +
                    inv_cost + short_cost +
-                   TON_PENALTY_USD * ceil_div_expr(co2_prod + co2_tran))
+                   TON_PENALTY_USD * ceil_div_expr(co2_prod + co2_tran, 1000))
 
     var_bag = dict(
         openF=openF, openW=openW, tipF=tipF, tipW=tipW,
@@ -292,10 +316,11 @@ def build_model(*, daily: bool = True, threads: int = 32):
         ProdR=ProdR, ProdO=ProdO,
         ShipF2W=Ship_F2W, ShipW2C=Ship_W2C,
         Inv=Inv, Short=Short, Scrap=Scrap,
-        modeUsed=modeUsed,
+        modeBlock=modeBlock, modeChange=modeChange,
         cost_terms=dict(capex=capex, prod=prod_cost, trans=trans_cost,
                         inv=inv_cost, short=short_cost,
-                        co2p=co2_prod, co2t=co2_tran)
+                        co2p=co2_prod, co2t=co2_tran,
+                        change=change_pen)
     )
 
     return m, var_bag
